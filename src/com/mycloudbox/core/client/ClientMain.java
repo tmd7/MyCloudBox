@@ -24,6 +24,7 @@ public class ClientMain extends Application {
         this.primaryStage.setTitle("My Cloud Box - Client");
 
         initRootLayout();
+        showAuthorizationLayout();
         showClientLayout();
 
 //
@@ -59,6 +60,18 @@ public class ClientMain extends Application {
 
             //Puts ClientLayout in center of RootLayout
             rootLayout.setCenter(clientLayout);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showAuthorizationLayout() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(ClientMain.class.getResource("AuthorizationLayout.fxml"));
+            AnchorPane authorizationLayout = (AnchorPane) loader.load();
+            rootLayout.setCenter(authorizationLayout);
+            authorizationLayout.setVisible(false);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycloudbox.core.client.AuthorizationController">
+   <children>
+      <VBox alignment="CENTER" layoutX="222.0" layoutY="200.0" prefHeight="200.0" prefWidth="157.0" spacing="10.0">
+         <children>
+            <TextField />
+            <PasswordField />
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" text="OK" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -15,8 +15,11 @@ public class ClientController implements Initializable{
     private Socket socket;
     private DataInputStream in;
     private DataOutputStream out;
+    private String clientCommand;
 
-
+    public void setClientCommand(String clientCommand) {
+        this.clientCommand = clientCommand;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -30,7 +33,7 @@ public class ClientController implements Initializable{
                 public void run() {
                     while (true) {
                         try {
-                            String s = in.readUTF();
+                            clientCommand = in.readUTF();
                         } catch (IOException e) {
                             e.printStackTrace();
                         } finally {
