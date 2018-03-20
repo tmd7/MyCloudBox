@@ -8,14 +8,14 @@ import java.net.Socket;
 
 public class ServerMain {
     public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(8080)) {
+        try (ServerSocket serverSocket = new ServerSocket(8888)) {
             System.out.println("Server has started... Waiting clients...");
             Socket socket = serverSocket.accept();
             System.out.println("Client has connected");
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-            //Test: echo from server
+            //Echo from testing
             while (true) {
                 String msg = in.readUTF();
                 System.out.println("from client: " + msg);

@@ -33,6 +33,12 @@ public class ClientController implements Initializable{
                             String s = in.readUTF();
                         } catch (IOException e) {
                             e.printStackTrace();
+                        } finally {
+                            try {
+                                socket.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
 
                     }
