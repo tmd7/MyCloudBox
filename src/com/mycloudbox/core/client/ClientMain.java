@@ -27,10 +27,6 @@ public class ClientMain extends Application {
         showAuthorizationLayout();
         showClientLayout();
 
-//
-//        primaryStage.setTitle("My Cloud Box");
-//        primaryStage.setScene(new Scene(root, 1000, 800));
-//        primaryStage.show();
     }
 
     //Init root layout
@@ -70,6 +66,8 @@ public class ClientMain extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(ClientMain.class.getResource("AuthorizationLayout.fxml"));
             AnchorPane authorizationLayout = (AnchorPane) loader.load();
+
+            //Puts Authorization in center of RootLayout
             rootLayout.setCenter(authorizationLayout);
             authorizationLayout.setVisible(false);
         } catch (IOException e) {
