@@ -34,7 +34,7 @@ public class ClientHandler {
                         }
                     }
                 }
-            });
+            }).start();
         } catch (IOException e) {
             e.printStackTrace();
         }
