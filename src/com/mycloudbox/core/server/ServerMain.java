@@ -9,8 +9,7 @@ public class ServerMain {
 
     public static void main(String[] args) {
         //create socket connection
-        connection = new Connect();
-        connection.connect();
+        new Connect().connect();
 
         //create db connection
         try {

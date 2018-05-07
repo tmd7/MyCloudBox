@@ -20,8 +20,6 @@ public class AuthorizationService {
             //if the resultSet has a line, it will return true. The ResultSet can't has more than once line, because the login has unic a value.
             if (resultSet.next()) {
                 return true;
-            } else {
-                return false;
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -34,7 +34,7 @@ public class ClientMain extends Application {
         try {
             //Download root layout
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(ClientMain.class.getResource("RootLayout.fxml"));
+            loader.setLocation(ClientMain.class.getResource("res/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             //Puts in primaryStage scene and puts in scene rootLayout
@@ -51,7 +51,7 @@ public class ClientMain extends Application {
         //Download ClientLayout
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(ClientMain.class.getResource("ClientLayout.fxml"));
+            loader.setLocation(ClientMain.class.getResource("res/ClientLayout.fxml"));
             AnchorPane clientLayout = (AnchorPane) loader.load();
 
             //Puts ClientLayout in center of RootLayout
@@ -64,12 +64,12 @@ public class ClientMain extends Application {
     public void showAuthorizationLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(ClientMain.class.getResource("AuthorizationLayout.fxml"));
+            loader.setLocation(ClientMain.class.getResource("res/AuthorizationLayout.fxml"));
             AnchorPane authorizationLayout = (AnchorPane) loader.load();
 
             //Puts Authorization in center of RootLayout
             rootLayout.setCenter(authorizationLayout);
-            authorizationLayout.setVisible(false);
+            authorizationLayout.setVisible(true);
         } catch (IOException e) {
             e.printStackTrace();
         }
